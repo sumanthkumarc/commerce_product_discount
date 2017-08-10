@@ -1,0 +1,22 @@
+# Product discount routing definition
+commerce_product_discount.settings_tab:
+  route_name: commerce_product_discount.settings
+  title: 'Settings'
+  base_route: commerce_product_discount.settings
+
+entity.commerce_product_discount.canonical:
+  route_name: entity.commerce_product_discount.canonical
+  base_route: entity.commerce_product_discount.canonical
+  title: 'View'
+
+entity.commerce_product_discount.edit_form:
+  route_name: entity.commerce_product_discount.edit_form
+  base_route: entity.commerce_product_discount.canonical
+  title: 'Edit'
+
+entity.commerce_product_discount.delete_form:
+  route_name:  entity.commerce_product_discount.delete_form
+  base_route:  entity.commerce_product_discount.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,14 @@
+
+# Product discount menu items definition
+entity.commerce_product_discount.collection:
+  title: 'Product discount list'
+  route_name: entity.commerce_product_discount.collection
+  description: 'List Product discount entities'
+  parent: system.admin_structure
+  weight: 100
+
+commerce_product_discount.admin.structure.settings:
+  title: Product discount settings
+  description: 'Configure Product discount entities'
+  route_name: commerce_product_discount.settings
+  parent: system.admin_structure

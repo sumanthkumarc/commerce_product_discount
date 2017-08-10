@@ -1,0 +1,7 @@
+name: Commerce Product Discount
+type: module
+description: Enables to provide per product discount and show discounted price, savings.
+core: 8.x
+package: Custom
+dependencies:
+  - commerce

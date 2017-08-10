@@ -1,0 +1,22 @@
+{#
+/**
+ * @file commerce_product_discount.html.twig
+ * Default theme implementation to present Product discount data.
+ *
+ * This template is used when viewing Product discount pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_commerce_product_discount()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('commerce_product_discount') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

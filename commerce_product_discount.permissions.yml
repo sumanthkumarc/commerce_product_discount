@@ -1,0 +1,22 @@
+add product discount entities:
+  title: 'Create new Product discount entities'
+
+administer product discount entities:
+  title: 'Administer Product discount entities'
+  description: 'Allow to access the administration form to configure Product discount entities.'
+  restrict access: true
+
+delete product discount entities:
+  title: 'Delete Product discount entities'
+
+edit product discount entities:
+  title: 'Edit Product discount entities'
+
+access product discount overview:
+  title: 'Access the Product discount overview page'
+
+view published product discount entities:
+  title: 'View published Product discount entities'
+
+view unpublished product discount entities:
+  title: 'View unpublished Product discount entities'

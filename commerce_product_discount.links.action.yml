@@ -1,0 +1,5 @@
+entity.commerce_product_discount.add_form:
+  route_name: entity.commerce_product_discount.add_form
+  title: 'Add Product discount'
+  appears_on:
+    - entity.commerce_product_discount.collection
