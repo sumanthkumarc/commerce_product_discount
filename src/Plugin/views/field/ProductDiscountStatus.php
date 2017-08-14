@@ -83,7 +83,7 @@ class ProductDiscountStatus extends FieldPluginBase {
 
       $options = [
         'active' => $this->t('Active'),
-        'inactive' => $this->t('In active'),
+        'inactive' => $this->t('Inactive'),
       ];
 
       $form[$this->options['id']][$row_index] = [

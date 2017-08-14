@@ -130,9 +130,7 @@ class SaveDiscount extends FieldPluginBase {
     $product_discount_percent = $all_values['discount_amount'][$row_index];
     $product_id = $all_values['save_discount'][$row_index]['product_id'];
 
-    $product_discount = \Drupal::entityQuery('commerce_product_discount')
-      ->condition('product_id', $product_id)
-      ->execute();
+    $product_discount = ProductDiscount::available($product_id);
 
     if ($product_discount_status == 'active') {
       if (empty($product_discount)) {
@@ -155,7 +153,7 @@ class SaveDiscount extends FieldPluginBase {
       }
       else {
         // Enable product promotion.
-        $product_discount = ProductDiscount::load(reset($product_discount));
+        $product_discount->setPublished(TRUE);
         $product_discount->syncPromotionAmount($product_discount_percent);
         $product_discount->enableProductPromotion();
       }
@@ -163,7 +161,6 @@ class SaveDiscount extends FieldPluginBase {
     else {
       if (!empty($product_discount)) {
         // Disable the product promotion.
-        $product_discount = ProductDiscount::load(reset($product_discount));
         $product_discount->disableProductPromotion();
       }
     }

@@ -139,4 +139,14 @@ interface ProductDiscountInterface extends ContentEntityInterface, EntityChanged
    */
   public function syncPromotionAmount($percentageAmount);
 
+  /**
+   * Checks if the product discount is availabe for given product id.
+   *
+   * @param $product_id
+   *   The product id to check disocunt for.
+   * @return mixed
+   *   The product discount entity if available.
+   */
+  public static function available($product_id);
+
 }

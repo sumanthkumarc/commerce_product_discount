@@ -348,4 +348,17 @@ class ProductDiscount extends ContentEntityBase implements ProductDiscountInterf
     }
   }
 
+  /**
+   * @inheritdoc
+   */
+  public static function available($product_id) {
+
+    $product_discount = \Drupal::entityTypeManager()->getStorage('commerce_product_discount')
+      ->loadByProperties([
+        'product_id' => $product_id,
+      ]);
+
+    return reset($product_discount);
+  }
+
 }

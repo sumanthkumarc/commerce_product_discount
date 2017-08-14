@@ -44,12 +44,9 @@ class DiscountedPriceFormatter extends PriceCalculatedFormatter {
 
       $markup = $actual_price_string;
 
-      $product_discount = \Drupal::entityQuery('commerce_product_discount')
-        ->condition('product_id', $purchasable_entity->getProductId())
-        ->execute();
+      $product_discount = ProductDiscount::available($purchasable_entity->getProductId());
 
       if (!empty($product_discount)) {
-        $product_discount = ProductDiscount::load(reset($product_discount));
         $promotion = $product_discount->getPromotion();
 
         if ($promotion->isEnabled()) {
